@@ -1,6 +1,6 @@
 # flutter_application_1
 
-A new Flutter project.
+Flutter for QA_KA
 
 ## Getting Started
 
