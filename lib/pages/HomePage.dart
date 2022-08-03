@@ -35,7 +35,12 @@ class _HomePageState extends State<HomePage> {
               Logo(),
               ElevatedButton(
                 onPressed: (){
-                  Navigator.pushNamed(context, '/about');
+                  Navigator.pushNamed(context, '/about' ,
+                  arguments: {
+                    'email' : 'noraphat@gmail.com',
+                    'phone' : '0929046554'
+                  }
+                  );
                 }, 
                 child: Text('Go to About Page'))
             ],

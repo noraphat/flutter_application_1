@@ -10,12 +10,28 @@ class AboutPage extends StatefulWidget {
 class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
+    Map<String, String> company = ModalRoute.of(context)!.settings.arguments as Map<String,String>; 
     return Scaffold(
       appBar: AppBar(
         title: Text('About Page'),
       ),
       body: Container(
-        child: Text('This is about page'),
+        child: Column(
+          children: [
+            Text('${company['email']}'),
+            Text('${company['phone']}'),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text('Go to HomePage')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/contact');
+                },
+                child: Text('Go to Contact Page'))
+          ],
+        ),
       ),
     );
   }
