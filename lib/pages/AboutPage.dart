@@ -27,7 +27,7 @@ class _AboutPageState extends State<AboutPage> {
                 child: Text('Go to HomePage')),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/contact');
+                  Navigator.pushNamed(context, 'homestack/contact');
                 },
                 child: Text('Go to Contact Page'))
           ],

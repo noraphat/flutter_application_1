@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/footer.dart';
 import 'package:flutter_application_1/widgets/logo.dart';
+import 'package:flutter_application_1/widgets/menu.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -24,6 +25,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Menu(),
       appBar: AppBar(
         title: Text('This is homepage'),
       ),
@@ -35,7 +37,7 @@ class _HomePageState extends State<HomePage> {
               Logo(),
               ElevatedButton(
                 onPressed: (){
-                  Navigator.pushNamed(context, '/about' ,
+                  Navigator.pushNamed(context, 'homestack/about' ,
                   arguments: {
                     'email' : 'noraphat@gmail.com',
                     'phone' : '0929046554'

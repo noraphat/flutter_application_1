@@ -18,7 +18,7 @@ class _ContactPageState extends State<ContactPage> {
         child: Center(
           child: ElevatedButton(
               onPressed: () {
-                Navigator.pushNamedAndRemoveUntil(context,'/', (Route<dynamic> route) => false);
+                Navigator.pushNamedAndRemoveUntil(context,'homestack/home', (Route<dynamic> route) => false);
               },
               child: Text('Go to Home Page')),
         ),
