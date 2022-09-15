@@ -3,6 +3,7 @@ import 'package:flutter_application_1/pages/AboutPage.dart';
 import 'package:flutter_application_1/pages/ContactPage.dart';
 import 'package:flutter_application_1/pages/HomePage.dart';
 import 'package:flutter_application_1/pages/HomeStack.dart';
+import 'package:flutter_application_1/pages/LoginPage.dart';
 import 'package:flutter_application_1/pages/ProductStack.dart';
 import 'package:flutter_application_1/widgets/footer.dart';
 import 'package:flutter_application_1/widgets/logo.dart';
@@ -32,8 +33,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //home: const HomePage(),
-      initialRoute: '/homestack',
+      initialRoute: '/loginpage',
       routes: {
+        '/loginpage':(context) => LoginPage(),
         '/homestack':(context) => HomeStack(),
         '/productstack':(context) => ProductStack(),
       },
